@@ -33,13 +33,18 @@ class WelcomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
+            flex: 3,
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/perosn.jpeg'),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
+          ),
+          Expanded(
+            child: Column(),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tfw_auth_screen/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Auth Screen 1',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: kBackgroundColor,
+        colorScheme: ColorScheme.light(
+          primary: kPrimaryColor,
+        ),
         useMaterial3: true,
       ),
       home: WelcomeScreen(),

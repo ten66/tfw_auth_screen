@@ -13,13 +13,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Auth Screen 1',
       theme: ThemeData(
+        // brightness: Brightness.dark,
         scaffoldBackgroundColor: kBackgroundColor,
-        colorScheme: ColorScheme.light(
+        colorScheme: const ColorScheme.dark(
           primary: kPrimaryColor,
+        ),
+        textTheme: const TextTheme(
+          displaySmall: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+          labelLarge: TextStyle(
+            color: kPrimaryColor,
+          ),
         ),
         useMaterial3: true,
       ),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
@@ -35,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/perosn.jpeg'),
                   fit: BoxFit.cover,
@@ -44,7 +54,20 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Column(),
+            child: Column(
+              children: [
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'BAKING LESSONS',
+                        style: Theme.of(context).textTheme.displaySmall,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

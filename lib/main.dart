@@ -59,6 +59,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 RichText(
                   textAlign: TextAlign.center,
@@ -75,24 +76,33 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 26,
-                    vertical: 16,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: kPrimaryColor,
-                  ),
-                  child: Row(
-                    children: [
-                      Text(
-                        'START LEARNING',
-                        style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                              color: Colors.black,
-                            ),
-                      ),
-                    ],
+                FittedBox(
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 25),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 26,
+                      vertical: 16,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: kPrimaryColor,
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          'START LEARNING',
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .copyWith(color: Colors.black),
+                        ),
+                        const SizedBox(width: 10),
+                        const Icon(
+                          Icons.arrow_forward,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

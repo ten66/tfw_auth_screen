@@ -26,6 +26,10 @@ class MyApp extends StatelessWidget {
           labelLarge: TextStyle(
             color: kPrimaryColor,
           ),
+          headlineSmall: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
         ),
         useMaterial3: true,
       ),
@@ -57,11 +61,36 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 RichText(
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'BAKING LESSONS',
+                        text: 'BAKING LESSONS\n',
                         style: Theme.of(context).textTheme.displaySmall,
+                      ),
+                      TextSpan(
+                        text: 'MASTER THE ART OF BAKING',
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 26,
+                    vertical: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: kPrimaryColor,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'START LEARNING',
+                        style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                              color: Colors.black,
+                            ),
                       ),
                     ],
                   ),

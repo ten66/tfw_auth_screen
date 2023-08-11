@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.white.withOpacity(.5)),
+            borderSide: BorderSide(color: Colors.white.withOpacity(.2)),
           ),
         ),
         useMaterial3: true,

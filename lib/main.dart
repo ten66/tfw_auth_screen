@@ -14,22 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Auth Screen 1',
       theme: ThemeData(
-        // brightness: Brightness.dark,
         scaffoldBackgroundColor: kBackgroundColor,
         colorScheme: const ColorScheme.dark(
           primary: kPrimaryColor,
         ),
         textTheme: const TextTheme(
-          displaySmall: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-          labelLarge: TextStyle(
-            color: kPrimaryColor,
-          ),
-          headlineSmall: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.normal,
+          displaySmall:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          labelLarge: TextStyle(color: kPrimaryColor),
+          headlineSmall:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white.withOpacity(.5)),
           ),
         ),
         useMaterial3: true,
